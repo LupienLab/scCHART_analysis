@@ -39,7 +39,12 @@ from epichaos.jaccard import pairwise_jaccard_mean
 
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "common"))
+sys.path.insert(0, str(ROOT / "scripts" / "02_granja"))
+sys.path.insert(0, str(ROOT / "scripts" / "05_method_comparisons"))
+
+import granja
+from epichaos_scores import het_raw_adj
+
 
 import granja
 from epichaos_scores import het_raw_adj

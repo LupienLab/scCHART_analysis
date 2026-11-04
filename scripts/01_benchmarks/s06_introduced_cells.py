@@ -27,7 +27,7 @@ from scchart._scoring import binarize
 
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "common"))
+sys.path.insert(0, str(ROOT / "scripts" / "06_buenrostro"))
 
 import buenrostro
 
