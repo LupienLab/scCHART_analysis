@@ -1,0 +1,37 @@
+[project]
+name = "epichaos"
+version = "0.1.0"
+description = "Python reimplementation of the epiCHAOS R package for quantifying cell-to-cell epigenetic heterogeneity in single-cell epigenomics data"
+readme = "README.md"
+authors = [
+    { name = "Arvind Iyer", email = "ayalurarvind@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.12",
+    "pandas>=2.2",
+    "anndata>=0.10",
+    "scanpy>=1.10",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "pyranges>=0.0.129",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.4",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.24,<0.12.0"]
+build-backend = "uv_build"
+
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
