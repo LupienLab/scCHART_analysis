@@ -42,6 +42,10 @@ The workflow separates computation from visualization:
 
 The repository uses scCHART v0.1.0. Independent verification of the organized workflow will be documented as it is completed.
 
+### Additional Note
+
+The epiCHAOS comparisons use an independent Python reimplementation of [epiCHAOS](https://github.com/CompEpigen/epiCHAOS) (Kelly et al., 2024), maintained under `tools/epichaos_py/`.
+
 ## Data availability
 
 The analyses use publicly available single-cell chromatin accessibility and multiome datasets, including the Granja and Buenrostro datasets.
