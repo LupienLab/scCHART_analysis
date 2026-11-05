@@ -1,0 +1,43 @@
+{
+  "analysis": "s02_programme_benchmark",
+  "scchart_version": "0.1.0",
+  "python_version": "3.11.14",
+  "parameters": {
+    "n_cells": 600,
+    "n_programmes": 3,
+    "n_replicates": 20,
+    "specialisation_levels": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      3.0
+    ],
+    "base_seed": 20260928,
+    "reference_seed": [
+      20260928,
+      5
+    ],
+    "calibrate": true,
+    "structural": false,
+    "null_settings": "scchart package defaults"
+  },
+  "checks": {
+    "Expected replicate count": true,
+    "All nulls preserve margins": true,
+    "Calibrated excess equals observed minus null": true,
+    "All programme scores finite": true
+  },
+  "outputs": [
+    {
+      "file": "programme_benchmark_replicates.tsv",
+      "rows": 100,
+      "sha256": "716014043ae3b8bf13644a01c8f78b6df0c49f7c54456a07702f875f9dd59bea"
+    },
+    {
+      "file": "programme_benchmark_summary.tsv",
+      "rows": 5,
+      "sha256": "bad109396f4effb197813a2688adfd21ea71c597cf3af6b87fd0756dc2f6ad0b"
+    }
+  ]
+}

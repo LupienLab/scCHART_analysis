@@ -1,0 +1,4 @@
+panel	quantity	value
+S4i	Spearman data-derived vs CATLAS Bheme Delta_P(D*) (K = 19)	0.9288888888888889
+S4j	Spearman data-derived vs CATLAS B Delta_P(D*) (K = 121)	0.3641025641025641
+2e	programme (CATLAS B') mean Kendall tau over different-donor pairs	0.4648328523

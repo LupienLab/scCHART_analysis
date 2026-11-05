@@ -40,7 +40,7 @@ The workflow separates computation from visualization:
 2. Results are saved in `results/`.
 3. Jupyter notebooks load these outputs to reproduce the manuscript figures.
 
-The repository uses scCHART v0.1.0. Independent verification of the organized workflow will be documented as it is completed.
+The repository uses scCHART v0.1.0. Some scCHART analyses involve stochastic sampling, including the estimation of sampling-based null distributions. Consequently, independent executions may produce slightly different numerical estimates depending on the random seed and random-number generation procedure.
 
 ### Additional Note
 

@@ -1,0 +1,155 @@
+{
+  "analysis": "s01_granja_population_scoring",
+  "module": "02_hematopoiesis",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 02_hematopoiesis/scripts/s01_granja_population_scoring.py",
+  "started": "2026-11-02 05:57:40",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "structural_seed": [
+      20260928,
+      130
+    ],
+    "programme_seed": 10000000,
+    "matched_depth_structural_seed": 20260925,
+    "matched_depth_programme_seed": "package defaults (seed 900_000, null_seed 20_000_000)",
+    "n_matched_replicates": 5,
+    "n_folds": 5,
+    "random_state": 0,
+    "population_order": "sorted labels",
+    "null": "package defaults (proposal_clock, 20 replicates)",
+    "n_jobs": 20
+  },
+  "inputs": [
+    {
+      "path": "/Users/arvind/Documents/postdoc/Hetrogenity/data/healthy_hematopoiesis_slim.h5ad",
+      "bytes": 139655018,
+      "sha256": "f3cebe1f2a0975cfd3629135165dc06a6bd63007b1988544fc19f932d9a2e6d9",
+      "note": "Granja healthy haematopoiesis atlas"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "02_hematopoiesis/results/granja_lsi_component_depth.tsv",
+      "bytes": 1201,
+      "sha256": "d40b3949e3afcca208d94e0a0e2e1d802054439193837772f2f328a74f46a680"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_structural_native.tsv",
+      "bytes": 3900,
+      "sha256": "d47eae20d8df0878f8e155341dbc9ad2ef724ae2b3142545293eff6988a5edc1"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_programme_native.tsv",
+      "bytes": 3944,
+      "sha256": "df4ff32bc26b49d756ec14dbf936342e8d71ba89393dea4049c11638adf50c54"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_cells.tsv.gz",
+      "bytes": 1298442,
+      "sha256": "bc4146ad5d4a09979c7d11015fd6fd6f0b10b8d96b15d5a30867ded11b8db079"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_mean_programme_composition.tsv",
+      "bytes": 10400,
+      "sha256": "a30075a821ad548f2e960bb50990d24d259a2d9c21d14006e88d92f20474d971"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_structural_matched_depth_replicates.tsv",
+      "bytes": 24536,
+      "sha256": "19fa26b83cc42feeb7b0028d33f63af19fd16de3b711489e686c424caff489e0"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_structural_matched_depth_summary.tsv",
+      "bytes": 2632,
+      "sha256": "f38faa9ebec2fa0a4cbdfd3c13d039b34533c15f1bbf531b05bb0a2ccda9d25a"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_programme_matched_depth_replicates.tsv",
+      "bytes": 18527,
+      "sha256": "e15773e6eaf2362e14f2e26938e5e67ce79000bd37ab99fdc3ca52ef627268d9"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_programme_matched_depth_summary.tsv",
+      "bytes": 3036,
+      "sha256": "f833278b491de01e5e62e18ad7a12eab63e7ee6c4800d2e4593fd6fad025aa72"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_population_summary.tsv",
+      "bytes": 6350,
+      "sha256": "71fe658655d81bed6efbfbbfd39d9a3e022d684de18da49c2afe2051c817f20c"
+    }
+  ],
+  "checks": [
+    {
+      "check": "population order is sorted labels",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "26 populations",
+      "status": "PASS",
+      "detail": "26"
+    },
+    {
+      "check": "35,038 cells scored",
+      "status": "PASS",
+      "detail": "35038"
+    },
+    {
+      "check": "nulls preserved margins (native and matched depth, both axes)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Delta = J - E0 at native depth",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "J_obs = mean per-cell d (structural)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "matched-depth estimates finite for every population",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "scchart": {
+    "scchart_file": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/environment/scchart-be6d042/src/scchart/__init__.py",
+    "scchart_commit": "be6d042a97fea81ea1c9ec8a3b6f1e9b3703ffe4",
+    "scchart_src_tree": "b0511acd80bd2ba8fe7f8cc8a9015f054a98ccdc"
+  },
+  "notes": {
+    "LSI components excluded (|r| > 0.30)": [
+      1,
+      2
+    ],
+    "stage 1 timings (s)": {
+      "inputs": 0.004074540920555592,
+      "structural scores": 0.1848701669368893,
+      "structural null": 1349.4205762080383,
+      "programme scores": 22.54549099993892,
+      "programme null": 350.44158283411525,
+      "store": 0.001778624951839447,
+      "total": 1722.59837758285
+    },
+    "D_star": {
+      "structural": 789.0,
+      "programme": 789.0
+    }
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "anndata": "0.10.9",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.2"
+  },
+  "runtime_s": 6667.1,
+  "finished": "2026-11-02 07:48:47",
+  "status": "COMPLETE"
+}

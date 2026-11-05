@@ -1,0 +1,6 @@
+set	n	n_same_direction_both	n_same_direction_HSCI	n_same_direction_HSCII	n_same_direction_both_trt_std	n_same_direction_both_bg_adjusted	n_beyond_bg_5_95_both	spearman_HSCI_vs_HSCII	median_aligned_delta_HSCI	median_aligned_delta_HSCII	spearman_delta_all_vs_published_state
+additional open in HH	62	61	61	62	61	62	36	0.1633917776	0.04792278074	0.07025283575	0.7208482402
+additional closed in HH	183	179	183	179	179	182	74	0.401500051	0.06984359026	0.0684427768	-0.03988951177
+all additional	245	240	244	241	240	244	110	0.7370688891	0.06226783246	0.0684427768	0.4669559788
+open_HH x published HSC-II	47	44	44	47	42	47	16	-0.06066915361	0.03044965863	0.07409930229	0.8265972838
+closed_HH x published HSC-I	170	166	170	166	167	167	88	0.4169139128	0.08484845608	0.05961865187	0.5984854408

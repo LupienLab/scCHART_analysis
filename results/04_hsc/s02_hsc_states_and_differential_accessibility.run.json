@@ -1,0 +1,188 @@
+{
+  "analysis": "s02_hsc_states_and_differential_accessibility",
+  "module": "04_xenograft_HSC",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 04_xenograft_HSC/scripts/s02_hsc_states_and_differential_accessibility.py",
+  "started": "2026-11-02 05:08:37",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "SEED": 20260929,
+    "depth_bins": 10,
+    "q_single": 0.2,
+    "q_joint": 0.25,
+    "min_joint_cells": 150,
+    "min_detection": 0.01,
+    "q_DA": 0.05,
+    "min_abs_log2_OR": "log2(1.5)",
+    "min_abs_diff": 0.02,
+    "thresholds": [
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.3333333333333333
+    ],
+    "gata_motifs": [
+      "GATA1",
+      "GATA2",
+      "GATA3",
+      "GATA4",
+      "GATA5",
+      "GATA6"
+    ],
+    "cmh_strata": "GC decile x HSC-accessibility decile x width tertile",
+    "published_markers": "padj < 0.05"
+  },
+  "inputs": [
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/04_xenograft_HSC/results/hsc_atlas_cell_contributions.tsv.gz",
+      "bytes": 1475565,
+      "sha256": "d6315e411969e1f3e99e42e98b5c67314f7b90fec5d865c3e746306a7649c6a3",
+      "note": "per-cell contributions (s01)"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/Hetrogenity/data/andy_hematopoiesis/andy_hematopoiesis.h5ad",
+      "bytes": 382361885,
+      "sha256": "84724fd3e282fa41630d05bb9726d4129bcff176a8ddd7d60065e21988762a8e",
+      "note": "Zeng et al. ATAC peak counts"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/cache/extract/motifs.tsv",
+      "bytes": 9921,
+      "sha256": "17f371a5af5d444a835ff0e4f57fd0229a2e72e6c5206bd0cd50ea3b77e6dab8",
+      "note": "hsc_motif_names"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/cache/extract/motif_matches.mtx",
+      "bytes": 99943614,
+      "sha256": "985f6a2261ea94437a98b8a6d08678805a8621291c9b165491614995df8a1829",
+      "note": "hsc_motif_matches"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/cache/extract/peaks.txt",
+      "bytes": 4474356,
+      "sha256": "a7097930f5e293667ba5e6beb6416a5bde5cfb1becf169ff743aebbba0155851",
+      "note": "hsc_motif_peaks"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/cache/chromvar/peak_gc_and_hsc_accessibility.tsv.gz",
+      "bytes": 3896994,
+      "sha256": "2bebd800c42126941f653056bad06b4c2c8d7138dbfd828a1811dd3e46d6a87e",
+      "note": "hsc_peak_gc"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/cache/author_inputs/HSCII_vs_HSCI_ATAC_DA_Markers.csv",
+      "bytes": 24860037,
+      "sha256": "4f34112af157d50de9ce070958e5fb4efe59de570dc955ca7691b7cb5a31aba2",
+      "note": "hsc_published_da"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "04_xenograft_HSC/results/hsc_da_structural_high_vs_low.tsv.gz",
+      "bytes": 7033251,
+      "sha256": "59ffa35b7268eb38dda52509daf4b780db78446b67413f1cc36edbc76b1c8cdb"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_da_programme_high_vs_low.tsv.gz",
+      "bytes": 6100807,
+      "sha256": "305a763503704340c31da0f5be65d535ff357b9ba40fb7d1ae48a0e148905a81"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_da_joint_high_vs_low.tsv.gz",
+      "bytes": 5686218,
+      "sha256": "a81288804e60b97a1bfebd62fa65d2fb94fcd83cf6fbcc672f551f1b8c33da18"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_da_summary.tsv",
+      "bytes": 174,
+      "sha256": "07998bc39b7ce690b47332b9c0bf4c3609d6078cfa1da9210f85316b765a9999"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_hh_ll_state_composition.tsv",
+      "bytes": 148,
+      "sha256": "e6e8a1188fae6175853893fb160d4b8d131889bb450f32f394a76f2d5ec82915"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_hh_ll_matched_cells.tsv",
+      "bytes": 183221,
+      "sha256": "37fb8e99f2332317e2141f01fffe5f5a6c2228eeed303bdcc8bb11a1199759d1"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_joint_da_binary_regions_x_cells.tsv.gz",
+      "bytes": 40588,
+      "sha256": "a4b974c114fd1e6c2a1bc1c15666e1f781144b702405587daae17ff94668c9e0"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_threshold_sensitivity.tsv",
+      "bytes": 1004,
+      "sha256": "579f78e793ee0d3a9b7642874916097eb579f4d1449509b7cac3906b4996ff52"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_zJ_region_association.tsv.gz",
+      "bytes": 6349562,
+      "sha256": "237dcce7bcf4541032ac5b124b7c91d311d7d6be8ef1d6fc1454c60954527f22"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_zJ_top_regions_gata.tsv",
+      "bytes": 169,
+      "sha256": "8e9116f9dfa70e912ab5e17f1e7fdb18ec1708d0733f00e31f8ef2b29fac6672"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_regionset_gradient_by_zJ_decile.tsv",
+      "bytes": 7610,
+      "sha256": "49a442b6079557cc583a43ec32150da3fab21a9787434e171acb7e89b42eb1e1"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_HSCII_share_by_zJ_decile.tsv",
+      "bytes": 791,
+      "sha256": "784b9d309055dd1894a13011a89b92e10adec2116dd9bfa780d926f7c29f569c"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_cell_joint_scores.tsv.gz",
+      "bytes": 239881,
+      "sha256": "c8029aa1ba97f44abce003601086a7b5ba47109cdfa0bc9c7ec6ead7cbf02659"
+    }
+  ],
+  "checks": [
+    {
+      "check": "threshold analysis at the joint quantile reproduces the joint DA sets",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "matched groups have equal size",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "DA regions satisfy every criterion",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "notes": {
+    "HSC cells scored on both axes": 5967,
+    "joint-tail quantile used": 0.25,
+    "joint DA regions (closing / opening)": [
+      355,
+      109
+    ],
+    "HSC-II share HH / LL": [
+      0.6535433070866141,
+      0.18635170603674542
+    ],
+    "Spearman d_S vs d_P": 0.47884166172438053
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "anndata": "0.10.9",
+    "statsmodels": "0.14.6"
+  },
+  "runtime_s": 49.2,
+  "finished": "2026-11-02 05:09:26",
+  "status": "COMPLETE"
+}

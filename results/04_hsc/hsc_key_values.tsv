@@ -1,0 +1,19 @@
+panel	quantity	value
+4a	broad HSC cells / scored on both axes	5976 / 5967
+S5a	Spearman d_S vs d_P (HSC)	0.47884166172438053
+4c	HSC-II share, lowest -> highest z_J decile	0.218 -> 0.600
+4c	HSC-II share HH / LL	0.654 / 0.186
+4d	joint: tested / DA (closing / opening)	91517 / 464 (355 / 109)
+4d	matched HH / LL cells	381 / 381
+S5b	structural: closing / opening	1134 / 632
+S5b	programme: closing / opening	144 / 16
+S5b	joint: closing / opening	355 / 109
+S5d	GATA MH OR (closing regions, q = 0.25; S5d stratification)	2.706291572
+S5d	GATA MH OR, 355 most negative Z	2.893004737
+S5d	GATA MH OR, 1000 most negative Z	2.384394169
+4e	joint open_in_high x published_HSCII: intersection / OR	47 / 21.01
+4e	joint open_in_high x published_HSCI: intersection / OR	0 / 0.00
+4e	joint closed_in_high x published_HSCII: intersection / OR	2 / 0.15
+4e	joint closed_in_high x published_HSCI: intersection / OR	170 / 36.08
+4f	additional regions / same direction in both substates / beyond background 5-95 % in both	245.0 / 240.0 / 110.0
+4g	GATA family in closing regions: hits / n, MH OR, q	204 / 355, 2.869, 5e-21

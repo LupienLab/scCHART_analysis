@@ -1,0 +1,11 @@
+region_set	n_regions
+A: all HH-open	109
+B: all HH-closed	355
+C: HH-open in published HSC-II	47
+D: HH-closed in published HSC-I	170
+E: additional HH-open	62
+F: additional HH-closed	183
+G: published HSC-II	3188
+H: published HSC-I	2404
+G': published HSC-II, not HH-LL DA	3139
+H': published HSC-I, not HH-LL DA	2234

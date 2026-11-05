@@ -1,0 +1,108 @@
+{
+  "analysis": "s02_depth_sparsity_validation",
+  "module": "02_hematopoiesis",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 02_hematopoiesis/scripts/s02_depth_sparsity_validation.py",
+  "started": "2026-11-02 07:48:48",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "series_populations": [
+      "11_CD14.Mono.1",
+      "17_B",
+      "24_CD8.CM",
+      "01_HSC",
+      "16_Pre.B",
+      "05_CMP.LMPP",
+      "07_GMP",
+      "06_CLP.1"
+    ],
+    "series_n_cells": 500,
+    "series_levels": [
+      250,
+      400,
+      789,
+      1200,
+      null
+    ],
+    "series_null_replicates": 5,
+    "matching_conditions": [
+      "B_fragment_matched",
+      "C_open_matched"
+    ],
+    "matching_programme_replicates": 5,
+    "matching_structural_replicates": 3,
+    "open_target": "native median detected regions of 20_CD4.N1",
+    "null": "package defaults (proposal_clock, 20 replicates)",
+    "n_jobs": 20
+  },
+  "inputs": [
+    {
+      "path": "/Users/arvind/Documents/postdoc/Hetrogenity/data/healthy_hematopoiesis_slim.h5ad",
+      "bytes": 139655018,
+      "sha256": "f3cebe1f2a0975cfd3629135165dc06a6bd63007b1988544fc19f932d9a2e6d9",
+      "note": "Granja healthy haematopoiesis atlas"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "02_hematopoiesis/results/depth_series_replicates.tsv",
+      "bytes": 22149,
+      "sha256": "7431b905412708f81219a796232b8781e65308e436a9a69fd8e618b3726e6e40"
+    },
+    {
+      "path": "02_hematopoiesis/results/matching_programme_replicates.tsv",
+      "bytes": 27053,
+      "sha256": "77f18a2696bb8a5eafd309aed12c56df5c56806a3c34ab1556e820cf5a67bb48"
+    },
+    {
+      "path": "02_hematopoiesis/results/matching_structural_replicates.tsv",
+      "bytes": 15537,
+      "sha256": "09720ff118a14c543da6c2fec4a3f6d0364c2108448c75b313ff8fcd5cf513a1"
+    }
+  ],
+  "checks": [
+    {
+      "check": "depth series rows",
+      "status": "PASS",
+      "detail": "168"
+    },
+    {
+      "check": "matching rows",
+      "status": "PASS",
+      "detail": "(260, 152)"
+    },
+    {
+      "check": "all nulls preserved margins",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "all Delta finite",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "scchart": {
+    "scchart_file": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/environment/scchart-be6d042/src/scchart/__init__.py",
+    "scchart_commit": "be6d042a97fea81ea1c9ec8a3b6f1e9b3703ffe4",
+    "scchart_src_tree": "b0511acd80bd2ba8fe7f8cc8a9015f054a98ccdc"
+  },
+  "notes": {
+    "D_star and open-region target": {
+      "D_star": 789.0,
+      "shallowest": "20_CD4.N1",
+      "open_target": 426.0
+    }
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "anndata": "0.10.9",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.2"
+  },
+  "runtime_s": 3522.4,
+  "finished": "2026-11-02 08:47:30",
+  "status": "COMPLETE"
+}

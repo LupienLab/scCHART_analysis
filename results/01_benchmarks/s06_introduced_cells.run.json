@@ -1,0 +1,56 @@
+{
+  "analysis": "s06_introduced_cells",
+  "scchart_version": "0.1.0",
+  "python_version": "3.11.14",
+  "parameters": {
+    "base_seed": 20261024,
+    "population_pairs": [
+      [
+        "HSC",
+        "MEP"
+      ],
+      [
+        "GMP",
+        "MEP"
+      ],
+      [
+        "CMP",
+        "LMPP"
+      ],
+      [
+        "HSC",
+        "mono"
+      ],
+      [
+        "HSC",
+        "MPP"
+      ]
+    ],
+    "introduced_fractions": [
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5
+    ],
+    "n_cells": 150,
+    "n_replicates": 20,
+    "representation": "Buenrostro LSI, 50 components"
+  },
+  "checks": {
+    "Expected replicate count": true,
+    "AUROC finite and between zero and one": true
+  },
+  "outputs": [
+    {
+      "file": "introduced_cells_replicates.tsv",
+      "rows": 500,
+      "sha256": "3f6f9753fab1e5da7d638654244cd5c0fbc6fb22f02c3418ba8819f49145fa0a"
+    },
+    {
+      "file": "introduced_cells_auroc_summary.tsv",
+      "rows": 25,
+      "sha256": "f94efcd77d3e02d04cf0c28b856ee302b9e75081886725dcc1cddf055ba895a2"
+    }
+  ]
+}

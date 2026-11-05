@@ -1,0 +1,89 @@
+{
+  "analysis": "s02_catlas_donor_programme",
+  "module": "03_CATLAS_programmes",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 03_CATLAS_programmes/scripts/s02_catlas_donor_programme.py",
+  "started": "2026-11-02 16:06:17",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "SEED": 20261024,
+    "n_max": 500,
+    "min_population_cells": 100,
+    "min_cells_per_sample": 50,
+    "cell_draw": "(SEED, 14, gi, di)",
+    "reference": "CATLAS B' programme_heme, ProgrammeHeterogeneity(n_folds=5, random_state=0) on the whole atlas",
+    "programme_seed": "30_000_000 + 10_000*f + 100*gi + di",
+    "min_shared_populations": 4,
+    "null": "package defaults (proposal_clock, 20 replicates, null_cells='scored')",
+    "n_jobs": 12
+  },
+  "inputs": [
+    {
+      "path": "/Users/arvind/Documents/postdoc/Hetrogenity/data/healthy_hematopoiesis_slim.h5ad",
+      "bytes": 139655018,
+      "sha256": "f3cebe1f2a0975cfd3629135165dc06a6bd63007b1988544fc19f932d9a2e6d9",
+      "note": "Granja healthy haematopoiesis atlas"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/external_programmes_catlas/reference/peak_to_catlas_programme.tsv.gz",
+      "bytes": 1554292,
+      "sha256": "d3fe8d0f335f30d8a2e7f8dc9ce4def7da52e4812a2d532d31272a77a019b91e",
+      "note": "per-peak CATLAS module labels (Granja peaks)"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "03_CATLAS_programmes/results/donor_programme_scores.tsv",
+      "bytes": 12940,
+      "sha256": "a090c8ad3f938ccee6757bda8412762be4af6bd49e95e72c2c37a6432203782c"
+    },
+    {
+      "path": "03_CATLAS_programmes/results/donor_programme_tau_pairs.tsv",
+      "bytes": 1357,
+      "sha256": "30f259b711c9aea7555eca8846a367fdd18a35d13c5449aea74ef7e684877e93"
+    },
+    {
+      "path": "03_CATLAS_programmes/results/donor_programme_tau_summary.tsv",
+      "bytes": 108,
+      "sha256": "ec47400c48f743d9bf2160814d2ad230f735141442694f79d8afdd2caf238370"
+    }
+  ],
+  "checks": [
+    {
+      "check": "peak order of the CATLAS table equals the atlas",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "B' reference has 19 modules",
+      "status": "PASS",
+      "detail": "19"
+    },
+    {
+      "check": "all nulls preserved margins",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Delta_P finite for every cell set",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "scchart": {
+    "scchart_file": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/environment/scchart-be6d042/src/scchart/__init__.py",
+    "scchart_commit": "be6d042a97fea81ea1c9ec8a3b6f1e9b3703ffe4",
+    "scchart_src_tree": "b0511acd80bd2ba8fe7f8cc8a9015f054a98ccdc"
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "anndata": "0.10.9",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.2"
+  },
+  "runtime_s": 349.6,
+  "finished": "2026-11-02 16:12:07",
+  "status": "COMPLETE"
+}

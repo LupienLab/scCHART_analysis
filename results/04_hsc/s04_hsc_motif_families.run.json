@@ -1,0 +1,252 @@
+{
+  "analysis": "s04_hsc_motif_families",
+  "module": "04_xenograft_HSC",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 04_xenograft_HSC/scripts/s04_hsc_motif_families.py",
+  "started": "2026-11-02 05:09:44",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "strata_main": "GC decile x accessibility decile x width tertile (ranks within universe)",
+    "strata_sensitivity": "GC decile x accessibility decile",
+    "extra_families": {
+      "FOS/JUN (TRE)": [
+        "FOS",
+        "FOSL1",
+        "FOSL2",
+        "JUN(var.2)",
+        "JUNB",
+        "JUND",
+        "JDP2",
+        "FOS::JUN",
+        "FOSB::JUN",
+        "FOSL1::JUN",
+        "FOSL2::JUN",
+        "JUN::JUNB",
+        "FOS::JUNB",
+        "FOSB::JUNB",
+        "FOSL1::JUNB",
+        "FOSL2::JUNB",
+        "FOS::JUND",
+        "FOSL1::JUND",
+        "FOSL2::JUND"
+      ],
+      "BATF": [
+        "BATF",
+        "BATF3",
+        "BATF::JUN"
+      ],
+      "BACH/NFE2 (CNC)": [
+        "BACH1",
+        "BACH2",
+        "NFE2",
+        "NFE2L1",
+        "MAF::NFE2"
+      ],
+      "ATF/CREB (CRE)": [
+        "ATF2",
+        "ATF3",
+        "ATF7",
+        "CREB1",
+        "CREM",
+        "JUN",
+        "JUND(var.2)",
+        "JDP2(var.2)",
+        "FOS::JUN(var.2)",
+        "FOSL1::JUN(var.2)",
+        "FOSL2::JUN(var.2)",
+        "JUN::JUNB(var.2)"
+      ],
+      "GATA1::TAL1": [
+        "GATA1::TAL1"
+      ],
+      "posterior HOX (9-13)": [
+        "HOXA9",
+        "HOXA10",
+        "HOXA13",
+        "HOXB9",
+        "HOXB13",
+        "HOXC9",
+        "HOXC10",
+        "HOXC11",
+        "HOXC12",
+        "HOXC13",
+        "HOXD9",
+        "HOXD10",
+        "HOXD11",
+        "HOXD12",
+        "HOXD13"
+      ],
+      "anterior/central HOX (1-8)": [
+        "HOXA1",
+        "HOXA2",
+        "HOXA4",
+        "HOXA5",
+        "HOXA6",
+        "HOXA7",
+        "HOXB2",
+        "HOXB3",
+        "HOXB4",
+        "HOXB5",
+        "HOXB6",
+        "HOXB7",
+        "HOXB8",
+        "HOXC4",
+        "HOXC8",
+        "HOXD3",
+        "HOXD4",
+        "HOXD8"
+      ],
+      "CDX": [
+        "CDX1",
+        "CDX2",
+        "CDX4"
+      ],
+      "TALE (MEIS/PKNOX/TGIF/PBX)": [
+        "MEIS1",
+        "MEIS1(var.2)",
+        "MEIS2",
+        "MEIS2(var.2)",
+        "MEIS3",
+        "PKNOX1",
+        "PKNOX2",
+        "TGIF1",
+        "TGIF2",
+        "TGIF2LX",
+        "TGIF2LY",
+        "PBX1",
+        "PBX2",
+        "PBX3"
+      ],
+      "SPI/PU.1": [
+        "SPI1",
+        "SPIB",
+        "SPIC"
+      ],
+      "RUNX": [
+        "RUNX2",
+        "RUNX3"
+      ],
+      "KLF/SP": [
+        "KLF2",
+        "KLF3",
+        "KLF4",
+        "KLF5",
+        "KLF6",
+        "KLF9",
+        "KLF10",
+        "KLF11",
+        "KLF13",
+        "KLF14",
+        "KLF15",
+        "KLF16",
+        "KLF17",
+        "SP1",
+        "SP2",
+        "SP3",
+        "SP4",
+        "SP8",
+        "SP9"
+      ],
+      "NF-Y": [
+        "NFYA",
+        "NFYB",
+        "NFYC"
+      ]
+    }
+  },
+  "inputs": [
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/04_xenograft_HSC/results/hsc_da_joint_high_vs_low.tsv.gz",
+      "bytes": 5686218,
+      "sha256": "a81288804e60b97a1bfebd62fa65d2fb94fcd83cf6fbcc672f551f1b8c33da18",
+      "note": "joint DA table (s02)"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/cache/extract/motifs.tsv",
+      "bytes": 9921,
+      "sha256": "17f371a5af5d444a835ff0e4f57fd0229a2e72e6c5206bd0cd50ea3b77e6dab8",
+      "note": "hsc_motif_names"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/cache/extract/motif_matches.mtx",
+      "bytes": 99943614,
+      "sha256": "985f6a2261ea94437a98b8a6d08678805a8621291c9b165491614995df8a1829",
+      "note": "hsc_motif_matches"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/cache/extract/peaks.txt",
+      "bytes": 4474356,
+      "sha256": "a7097930f5e293667ba5e6beb6416a5bde5cfb1becf169ff743aebbba0155851",
+      "note": "hsc_motif_peaks"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/cache/chromvar/peak_gc_and_hsc_accessibility.tsv.gz",
+      "bytes": 3896994,
+      "sha256": "2bebd800c42126941f653056bad06b4c2c8d7138dbfd828a1811dd3e46d6a87e",
+      "note": "hsc_peak_gc"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/replicate_validation/family_definitions.tsv",
+      "bytes": 2343,
+      "sha256": "1715311a9dcc455709d29e832c2d83b61aa43f62087a50d1fa9c6fd1ff8d853d",
+      "note": "hsc_motif_families"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/cache/author_inputs/HSCII_vs_HSCI_ATAC_DA_Markers.csv",
+      "bytes": 24860037,
+      "sha256": "4f34112af157d50de9ce070958e5fb4efe59de570dc955ca7691b7cb5a31aba2",
+      "note": "hsc_published_da"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "04_xenograft_HSC/results/hsc_motif_family_enrichment.tsv",
+      "bytes": 46442,
+      "sha256": "118cf5d6b3a6feaee3d5e06731cff3d06297999ad7c638f37e07601e2179cc51"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_motif_enrichment.tsv.gz",
+      "bytes": 386351,
+      "sha256": "9111414cb9973b9c5643312ca25087cd9112eda8b180c1b9d74038cebec1ce21"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_motif_region_sets.tsv",
+      "bytes": 312,
+      "sha256": "e000dacabf7ec00dbd3952fa8260bd640d3c4187ce1a58a75b1b979a0eed5ed7"
+    }
+  ],
+  "checks": [
+    {
+      "check": "motif matrix dimensions",
+      "status": "PASS",
+      "detail": "(187329, 633)"
+    },
+    {
+      "check": "every family member is a matched motif",
+      "status": "PASS",
+      "detail": "{}"
+    },
+    {
+      "check": "family results finite for the HH-closed set",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "notes": {
+    "GATA in HH-closed regions": {
+      "fg_hits": 204,
+      "n": 355,
+      "MH_OR": 2.8689514323804612,
+      "q": 5.0063159690493324e-21
+    }
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "statsmodels": "0.14.6"
+  },
+  "runtime_s": 22.9,
+  "finished": "2026-11-02 05:10:07",
+  "status": "COMPLETE"
+}

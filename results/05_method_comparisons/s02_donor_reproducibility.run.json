@@ -1,0 +1,101 @@
+{
+  "analysis": "s02_donor_reproducibility",
+  "module": "05_method_comparisons",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 05_method_comparisons/scripts/s02_donor_reproducibility.py",
+  "started": "2026-11-02 16:06:17",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "SEED": 20261024,
+    "n_max": 500,
+    "min_cells_per_sample": 50,
+    "cell_draw": "(SEED, 14, gi, di)",
+    "structural_seed_key": "(SEED, 13, gi, di)",
+    "jaccard_rng": "(SEED, 16, gi, di)",
+    "jaccard_subsets": {
+      "n": 100,
+      "reps": 5
+    },
+    "epichaos_rng": "(SEED, 15, k), k = index among scored samples",
+    "min_shared_populations": 4,
+    "null": "package defaults (proposal_clock, 20 replicates)",
+    "n_jobs": 12
+  },
+  "inputs": [
+    {
+      "path": "/Users/arvind/Documents/postdoc/Hetrogenity/data/healthy_hematopoiesis_slim.h5ad",
+      "bytes": 139655018,
+      "sha256": "f3cebe1f2a0975cfd3629135165dc06a6bd63007b1988544fc19f932d9a2e6d9",
+      "note": "Granja counts"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "05_method_comparisons/results/donor_sample_scores.tsv",
+      "bytes": 10327,
+      "sha256": "33f70583e8cb6ddb63f851ee334c4b33c0cf297401cd276f3444b148e6f9f547"
+    },
+    {
+      "path": "05_method_comparisons/results/donor_tau_pairs.tsv",
+      "bytes": 4426,
+      "sha256": "95352c82a174ffd759fd8c6f4803acc9147598ea4004ea01e21c5c7233b7979e"
+    },
+    {
+      "path": "05_method_comparisons/results/donor_tau_summary.tsv",
+      "bytes": 263,
+      "sha256": "ee718b18c7a76c8a6c069aaf9126a7b57a7d155debcef2fe652dc9a62c92dadf"
+    }
+  ],
+  "checks": [
+    {
+      "check": "all nulls preserved margins",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "every sample-level score finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "same number of different-donor pairs for every estimator",
+      "status": "PASS",
+      "detail": "[24, 24, 24, 24]"
+    }
+  ],
+  "scchart": {
+    "scchart_file": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/environment/scchart-be6d042/src/scchart/__init__.py",
+    "scchart_commit": "be6d042a97fea81ea1c9ec8a3b6f1e9b3703ffe4",
+    "scchart_src_tree": "b0511acd80bd2ba8fe7f8cc8a9015f054a98ccdc"
+  },
+  "epichaos": {
+    "epichaos_file": "/Users/arvind/Documents/epichaos_py/src/epichaos/__init__.py",
+    "epichaos_commit": "ba4a41368c8c2a62f798581bd6cc53a4bb563b01"
+  },
+  "notes": {
+    "samples": [
+      "BMMC_D6T1",
+      "CD34_D7T1",
+      "CD34_D8T1",
+      "CD34_D9T1",
+      "BMMC_D5T1",
+      "PBMC_D10T1",
+      "PBMC_D11T1",
+      "PBMC_D12T1",
+      "PBMC_D12T2",
+      "PBMC_D12T3"
+    ]
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "anndata": "0.10.9",
+    "matplotlib": "3.10.8",
+    "joblib": "1.5.2",
+    "epichaos": "0.1.0"
+  },
+  "runtime_s": 1095.1,
+  "finished": "2026-11-02 16:24:32",
+  "status": "COMPLETE"
+}

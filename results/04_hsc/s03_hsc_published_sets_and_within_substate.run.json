@@ -1,0 +1,140 @@
+{
+  "analysis": "s03_hsc_published_sets_and_within_substate",
+  "module": "04_xenograft_HSC",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 04_xenograft_HSC/scripts/s03_hsc_published_sets_and_within_substate.py",
+  "started": "2026-11-02 05:09:27",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "published_sets": "padj < 0.05; sign of log2FoldChange (HSC-II vs HSC-I)",
+    "min_cells_per_treatment_arm": 10,
+    "background": "all tested peaks, 5th/50th/95th percentiles",
+    "locus_merge_bp": 250000
+  },
+  "inputs": [
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/04_xenograft_HSC/results/hsc_da_joint_high_vs_low.tsv.gz",
+      "bytes": 5686218,
+      "sha256": "a81288804e60b97a1bfebd62fa65d2fb94fcd83cf6fbcc672f551f1b8c33da18",
+      "note": "joint DA table (s02)"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/04_xenograft_HSC/results/hsc_da_structural_high_vs_low.tsv.gz",
+      "bytes": 7033251,
+      "sha256": "59ffa35b7268eb38dda52509daf4b780db78446b67413f1cc36edbc76b1c8cdb",
+      "note": "structural DA table (s02)"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/04_xenograft_HSC/results/hsc_da_programme_high_vs_low.tsv.gz",
+      "bytes": 6100807,
+      "sha256": "305a763503704340c31da0f5be65d535ff357b9ba40fb7d1ae48a0e148905a81",
+      "note": "programme DA table (s02)"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/04_xenograft_HSC/results/hsc_cell_joint_scores.tsv.gz",
+      "bytes": 239881,
+      "sha256": "c8029aa1ba97f44abce003601086a7b5ba47109cdfa0bc9c7ec6ead7cbf02659",
+      "note": "HSC cells, groups and matched flags (s02)"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/hsc_global_regulatory_followup/cache/author_inputs/HSCII_vs_HSCI_ATAC_DA_Markers.csv",
+      "bytes": 24860037,
+      "sha256": "4f34112af157d50de9ce070958e5fb4efe59de570dc955ca7691b7cb5a31aba2",
+      "note": "published HSC-II vs HSC-I ATAC markers"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/Hetrogenity/data/andy_hematopoiesis/andy_hematopoiesis.h5ad",
+      "bytes": 382361885,
+      "sha256": "84724fd3e282fa41630d05bb9726d4129bcff176a8ddd7d60065e21988762a8e",
+      "note": "Zeng et al. ATAC peak counts"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "04_xenograft_HSC/results/hsc_published_overlap_statistics.tsv",
+      "bytes": 1574,
+      "sha256": "0ae5cb2224d8c4fee892fa59b283d48c1f00ff239ebfe2fddecb7bbce43ba4fa"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_joint_da_region_categories.tsv",
+      "bytes": 131056,
+      "sha256": "a2074d5a3da14807fbaa595bbd5d2b45f5e117a88c2fdee590fc107c15afc441"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_within_substate_group_counts.tsv",
+      "bytes": 172,
+      "sha256": "25072c336379cf6dbd7dfc067e4c8ec842e47ed0e66e6d71135d2f17febbb8ce"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_within_substate_background.tsv",
+      "bytes": 210,
+      "sha256": "a20a43e03e7d354d1c43893f2c0f82567d3a91d4b2e11c6c13b91ac066f4f26f"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_joint_da_within_substate.tsv",
+      "bytes": 240843,
+      "sha256": "12aa0d62d81966bf309819238fc136a3bdedbe4d5f89b563cf0b767b889018a2"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_within_substate_summary.tsv",
+      "bytes": 784,
+      "sha256": "d776acd2eaf77e7116cd76dbfff233a37c61218ed205aedc054a915219497e47"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_additional_regions.tsv",
+      "bytes": 136039,
+      "sha256": "8978a92a4d2e76961527b812d897f597d50672538360e1aae2a972e263847674"
+    }
+  ],
+  "checks": [
+    {
+      "check": "published peak names equal the atlas peaks",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "recomputed HH/LL fractions equal the DA table",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "every joint DA region categorised",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "substate groups partition the matched cells",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "notes": {
+    "treatment arms used": {
+      "HSCI": [
+        "PBS",
+        "TNF",
+        "LPS"
+      ],
+      "HSCII": [
+        "PBS",
+        "TNF"
+      ]
+    },
+    "joint DA categories": {
+      "closed_HH__neither": 183,
+      "closed_HH__published_HSCI": 170,
+      "open_HH__neither": 62,
+      "open_HH__published_HSCII": 47,
+      "closed_HH__published_HSCII": 2
+    }
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "anndata": "0.10.9"
+  },
+  "runtime_s": 16.3,
+  "finished": "2026-11-02 05:09:43",
+  "status": "COMPLETE"
+}

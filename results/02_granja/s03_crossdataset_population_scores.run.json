@@ -1,0 +1,121 @@
+{
+  "analysis": "s03_crossdataset_population_scores",
+  "module": "02_hematopoiesis",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 02_hematopoiesis/scripts/s03_crossdataset_population_scores.py",
+  "started": "2026-11-02 08:47:32",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "SEED": 20261024,
+    "n_max": 500,
+    "native_seed_key": "(SEED, 11, gi, 100, 0)",
+    "matched_seed_key": "(SEED, 31, gi, t)",
+    "matched_replicates": 3,
+    "epichaos_rng": "(SEED, 12, 100, 0)",
+    "epichaos_subsets": {
+      "n": 100,
+      "reps": 5
+    },
+    "null": "package defaults (proposal_clock, 20 replicates)",
+    "n_jobs": 20
+  },
+  "inputs": [
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_divergence_v2/datasets/processed/buenrostro2018.h5ad",
+      "bytes": 70658539,
+      "sha256": "d443e4e7cf31bfa65321eae5c0c2011bfbca5012d4fca0e24a568cf186b47dda",
+      "note": "buenrostro counts"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/Hetrogenity/data/healthy_hematopoiesis_slim.h5ad",
+      "bytes": 139655018,
+      "sha256": "f3cebe1f2a0975cfd3629135165dc06a6bd63007b1988544fc19f932d9a2e6d9",
+      "note": "granja counts"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "02_hematopoiesis/results/buenrostro_population_sets_native.tsv",
+      "bytes": 805,
+      "sha256": "eccaed4a2e5deb4cf46ed15f0173e4cb0d9645766bd286030b1b031916135b11"
+    },
+    {
+      "path": "02_hematopoiesis/results/buenrostro_population_sets_matched_replicates.tsv",
+      "bytes": 2019,
+      "sha256": "a4e9651781ec21d8698fdb0220ad21c7ff73a9d65ddd599f58b0f42551498d17"
+    },
+    {
+      "path": "02_hematopoiesis/results/buenrostro_population_sets_summary.tsv",
+      "bytes": 1238,
+      "sha256": "7a895526d7ddef0d1993210cfdf0ea0e32a681d6ce6a48ebf906c8744023c8ca"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_population_sets_native.tsv",
+      "bytes": 2402,
+      "sha256": "f964fcd2c82a2e8f90f53a2f9da3eaab533e1d9fea90147f7505cb5147308a93"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_population_sets_matched_replicates.tsv",
+      "bytes": 6433,
+      "sha256": "b5922c385a779da97159f424569f47efecb60ffa3d06d074f6d853930636086e"
+    },
+    {
+      "path": "02_hematopoiesis/results/granja_population_sets_summary.tsv",
+      "bytes": 3641,
+      "sha256": "16218c1d55d1dd1d4f92d5ab6a6f9efebf201a62fb5598f48f9072126e592e7a"
+    }
+  ],
+  "checks": [
+    {
+      "check": "buenrostro: all nulls preserved margins",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "buenrostro: scores finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "granja: all nulls preserved margins",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "granja: scores finite",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "scchart": {
+    "scchart_file": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/environment/scchart-be6d042/src/scchart/__init__.py",
+    "scchart_commit": "be6d042a97fea81ea1c9ec8a3b6f1e9b3703ffe4",
+    "scchart_src_tree": "b0511acd80bd2ba8fe7f8cc8a9015f054a98ccdc"
+  },
+  "epichaos": {
+    "epichaos_file": "/Users/arvind/Documents/epichaos_py/src/epichaos/__init__.py",
+    "epichaos_commit": "ba4a41368c8c2a62f798581bd6cc53a4bb563b01"
+  },
+  "notes": {
+    "buenrostro: populations, D*": {
+      "n": 9,
+      "D_star": 2214.0
+    },
+    "granja: populations, D*": {
+      "n": 26,
+      "D_star": 466.5
+    }
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "anndata": "0.10.9",
+    "matplotlib": "3.10.8",
+    "joblib": "1.5.2",
+    "epichaos": "0.1.0"
+  },
+  "runtime_s": 1892.8,
+  "finished": "2026-11-02 09:19:05",
+  "status": "COMPLETE"
+}

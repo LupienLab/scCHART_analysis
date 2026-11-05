@@ -1,0 +1,13 @@
+panel	quantity	value
+S3c	F2 continuous dispersion: Spearman rho structural	0.991210992888232
+S3c	F2 continuous dispersion: Spearman rho structural_e2e	0.9244615170730874
+S3c	F2 continuous dispersion: Spearman rho programme	0.009367452519811421
+S3c	F2 continuous dispersion: Spearman rho epiCHAOS	0.3918423063475834
+2d	Spearman rho(separation, structural_e2e) at 50 % minority	0.9798448905826678
+2d	Spearman rho(separation, jaccard_dissimilarity) at 50 % minority	0.8818604015244009
+2d	Spearman rho(separation, epiCHAOS) at 50 % minority	0.8835751300829205
+S3d	Spearman Delta_G vs epiCHAOS het_adj (26 populations)	0.12
+2e	mean Kendall tau scCHART structural (n pairs)	0.804 (24)
+2e	mean Kendall tau scCHART programme (n pairs)	0.465 (24)
+2e	mean Kendall tau epiCHAOS (n pairs)	0.212 (24)
+2e	mean Kendall tau 1 − Jaccard (n pairs)	0.275 (24)

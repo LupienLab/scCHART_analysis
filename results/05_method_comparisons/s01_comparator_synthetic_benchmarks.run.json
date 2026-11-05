@@ -1,0 +1,95 @@
+{
+  "analysis": "s01_comparator_synthetic_benchmarks",
+  "module": "05_method_comparisons",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 05_method_comparisons/scripts/s01_comparator_synthetic_benchmarks.py",
+  "started": "2026-11-02 05:41:59",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "SEED_F": 20260929,
+    "F2": {
+      "h_grid": [
+        0.0,
+        0.05,
+        0.1,
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "n_cells": 500,
+      "n_rep": 20
+    },
+    "F4": {
+      "k": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "separation": 2.0,
+      "n_cells": 600,
+      "n_rep": 20
+    },
+    "e2e_lsi": "10 components, all kept, random_state 1",
+    "null": "package defaults (proposal_clock, 20 replicates)",
+    "n_jobs": 20
+  },
+  "inputs": [],
+  "outputs": [
+    {
+      "path": "05_method_comparisons/results/comparator_dispersion_replicates.tsv",
+      "bytes": 21281,
+      "sha256": "1fd0aa07bd1c37326b32853a55c9917bbe7a04b9392f028586c589ae29517e14"
+    },
+    {
+      "path": "05_method_comparisons/results/comparator_multistate_replicates.tsv",
+      "bytes": 14552,
+      "sha256": "c1d297e3839007d5e3e16f972b7a752f036125250a6280e0a9d7bcbe84795ecf"
+    }
+  ],
+  "checks": [
+    {
+      "check": "F4 state centres equidistant and orthogonal to mu",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "replicate counts",
+      "status": "PASS",
+      "detail": "(140, 100)"
+    },
+    {
+      "check": "nulls preserved margins and completed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "scores finite",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "scchart": {
+    "scchart_file": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/environment/scchart-be6d042/src/scchart/__init__.py",
+    "scchart_commit": "be6d042a97fea81ea1c9ec8a3b6f1e9b3703ffe4",
+    "scchart_src_tree": "b0511acd80bd2ba8fe7f8cc8a9015f054a98ccdc"
+  },
+  "epichaos": {
+    "epichaos_file": "/Users/arvind/Documents/epichaos_py/src/epichaos/__init__.py",
+    "epichaos_commit": "ba4a41368c8c2a62f798581bd6cc53a4bb563b01"
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "anndata": "0.10.9",
+    "matplotlib": "3.10.8",
+    "joblib": "1.5.2",
+    "epichaos": "0.1.0"
+  },
+  "runtime_s": 407.2,
+  "finished": "2026-11-02 05:48:46",
+  "status": "COMPLETE"
+}

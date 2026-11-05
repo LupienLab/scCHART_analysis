@@ -1,0 +1,65 @@
+{
+  "analysis": "s01_structural_benchmarks",
+  "scchart_version": "0.1.0",
+  "python_version": "3.11.14",
+  "parameters": {
+    "n_cells": 500,
+    "n_dimensions": 10,
+    "n_replicates": 20,
+    "base_seed": 20260925,
+    "benchmark_ids": {
+      "continuous_dispersion": 1,
+      "two_state": 2
+    },
+    "dispersion_levels": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "separation_levels": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      3.0
+    ],
+    "two_state_sigma": 0.05,
+    "fraction_state_B": 0.5,
+    "adapter": "signed_channel",
+    "null_calibration": false
+  },
+  "checks": {
+    "Population J equals mean per-cell contribution": true,
+    "Expected replicate count": true,
+    "Finite, nonnegative heterogeneity": true,
+    "Two-state heterogeneity <= 1 bit": true,
+    "Expected number of per-cell rows": true
+  },
+  "outputs": [
+    {
+      "file": "structural_benchmark_views.tsv",
+      "rows": 2000,
+      "sha256": "f30c45a517feedbff0b430a13769a64ba2b5188902768da4aa1c36620118e6d3"
+    },
+    {
+      "file": "structural_benchmark_replicates.tsv",
+      "rows": 260,
+      "sha256": "3f0b57728f374a124792d5c8c6c133b8c0f6744f885b1c55a89067df06e07ee2"
+    },
+    {
+      "file": "structural_benchmark_summary.tsv",
+      "rows": 13,
+      "sha256": "c594c2c894fd4e4120416ab31f730406fd21ab8d19d2ca939faa1a5eabc4bb45"
+    },
+    {
+      "file": "structural_benchmark_per_cell.tsv.gz",
+      "rows": 130000,
+      "sha256": "f84668adea02cd279f455c980f66a249d96746cac686d34ffa1348cf1dd95ca2"
+    }
+  ]
+}

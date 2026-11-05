@@ -1,0 +1,87 @@
+{
+  "analysis": "s03_catlas_buenrostro_programmes",
+  "module": "03_CATLAS_programmes",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 03_CATLAS_programmes/scripts/s03_catlas_buenrostro_programmes.py",
+  "started": "2026-11-02 16:06:17",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "n_folds": 5,
+    "random_state": 0,
+    "programme_seed": 10000000,
+    "matched_depth": "depth_standardized_programme_comparison, 5 replicates, package-default seeds",
+    "null": "package defaults (proposal_clock, 20 replicates)"
+  },
+  "inputs": [
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_divergence_v2/datasets/processed/buenrostro2018.h5ad",
+      "bytes": 70658539,
+      "sha256": "d443e4e7cf31bfa65321eae5c0c2011bfbca5012d4fca0e24a568cf186b47dda",
+      "note": "Buenrostro 2018 processed counts"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/figure_reproduction/tables/v3/F3E_buenrostro_catlas_peak_assignment.tsv.gz",
+      "bytes": 2092176,
+      "sha256": "4d6a69f0b56a52ff9254b7f852922bc577d7b48d79c3d7e7c115de1bbe0320c5",
+      "note": "per-peak CATLAS B' labels (Buenrostro peaks)"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "03_CATLAS_programmes/results/buenrostro_catlas_Bheme_population_summary.tsv",
+      "bytes": 970,
+      "sha256": "9770b8a422f12740d9a32769deabc8e13ec979801cb22e43e83d1de5899bf40a"
+    },
+    {
+      "path": "03_CATLAS_programmes/results/buenrostro_catlas_Bheme_matched_depth_replicates.tsv",
+      "bytes": 6716,
+      "sha256": "08a13c005bbb7e5b879f191dd14c65ae4aebb7f54584ca736498638e94b7bf93"
+    }
+  ],
+  "checks": [
+    {
+      "check": "peak order of the CATLAS table equals the analysis feature universe",
+      "status": "PASS",
+      "detail": "79404 vs 79404"
+    },
+    {
+      "check": "retained B' modules between 1 and 19",
+      "status": "PASS",
+      "detail": "19"
+    },
+    {
+      "check": "nulls preserved margins",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Delta finite for every population",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "scchart": {
+    "scchart_file": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/environment/scchart-be6d042/src/scchart/__init__.py",
+    "scchart_commit": "be6d042a97fea81ea1c9ec8a3b6f1e9b3703ffe4",
+    "scchart_src_tree": "b0511acd80bd2ba8fe7f8cc8a9015f054a98ccdc"
+  },
+  "notes": {
+    "cells x peaks, K, D*": {
+      "cells": 2217,
+      "peaks": 79404,
+      "K": 19,
+      "D_star": 2214.0
+    }
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "anndata": "0.10.9",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.2"
+  },
+  "runtime_s": 710.5,
+  "finished": "2026-11-02 16:18:08",
+  "status": "COMPLETE"
+}

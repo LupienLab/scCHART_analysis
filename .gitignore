@@ -2,3 +2,20 @@
 # Python caches
 __pycache__/
 *.py[cod]
+
+# Input datasets — distributed separately through Zenodo
+/data/*
+!/data/README.md
+
+# Python-generated files
+__pycache__/
+*.pyc
+.DS_Store
+
+# Execution logs and process IDs
+/logs/
+*.pid
+
+# Small frozen inputs needed for HSC figure reproduction
+!/data/hsc_tracks/
+!/data/hsc_tracks/*.tsv

@@ -1,0 +1,79 @@
+{
+  "analysis": "s05_technical_robustness",
+  "scchart_version": "0.1.0",
+  "python_version": "3.11.14",
+  "parameters": {
+    "base_seed": 20260930,
+    "depth_targets": [
+      4000,
+      2500,
+      1500,
+      1000,
+      600,
+      300
+    ],
+    "depth_replicates": 5,
+    "cell_numbers": [
+      100,
+      250,
+      500,
+      1000,
+      2000
+    ],
+    "cell_replicates": 10,
+    "shallow_fraction": 0.35,
+    "matched_cells": 1000,
+    "matched_replicates": 5,
+    "n_jobs": 2
+  },
+  "warnings": [],
+  "checks": {
+    "Expected depth and cell-size replicate counts": true,
+    "Null margins preserved and chains complete": true,
+    "Excess equals observed minus null": true,
+    "Matched-depth means finite": true,
+    "SD defined for thinned populations": true
+  },
+  "outputs": [
+    {
+      "file": "robustness_depth_series_replicates.tsv",
+      "rows": 31,
+      "sha256": "3f22ab5863f88047ac2503ae29e895b5b0ec98dbc23225da8f3b3f5390abfcbf"
+    },
+    {
+      "file": "robustness_depth_series_summary.tsv",
+      "rows": 7,
+      "sha256": "fa90443fd71fd5b6d1a6a2ce018e0a2d6e1a20e55a107d4284882263482865c8"
+    },
+    {
+      "file": "robustness_cell_number_replicates.tsv",
+      "rows": 50,
+      "sha256": "c27badeef5aae5d8e7026853017ad775773db5b8a858692b8a8dda3ebebec61a"
+    },
+    {
+      "file": "robustness_cell_number_summary.tsv",
+      "rows": 5,
+      "sha256": "d25a0bdb60f2b5c5262a163ffcf572b841be4356f53db090ce30ba99b7951a1c"
+    },
+    {
+      "file": "robustness_matched_depth_observed.tsv",
+      "rows": 2,
+      "sha256": "a9bf647ee059b4ea95333567b594793b7b0ec19fd1f68efe4452574b8cf5e0c7"
+    },
+    {
+      "file": "robustness_matched_depth_structural_replicates.tsv",
+      "rows": 6,
+      "sha256": "bf8310b11e90bee7a1f475599e4da9c624e8055d1200bca2ffa4a3340f3b133a"
+    },
+    {
+      "file": "robustness_matched_depth_programme_replicates.tsv",
+      "rows": 10,
+      "sha256": "28362f643e931d4d5372794dc1f3e07856c17018637107f4b5fa6e8b8557c3fb"
+    },
+    {
+      "file": "robustness_matched_depth_comparison.tsv",
+      "rows": 2,
+      "sha256": "ea3e4229331ee4ede84b00ddde389d23b60863ff49a5fcd20d714a9e1edc7c04"
+    }
+  ]
+}

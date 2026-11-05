@@ -1,0 +1,15 @@
+population	n_cells	median_count_depth	cell_class	eligible_pool	selected
+11_CD14.Mono.1	2287	4010	monocyte	True	False
+12_CD14.Mono.2	3878	3300	monocyte	True	True
+09_pDC	825	3833	dendritic cell	True	True
+10_cDC	328	5374	dendritic cell	False	False
+17_B	1824	1534.5	B	True	True
+18_Plasma	103	1724	B	False	False
+19_CD8.N	689	929	T	False	False
+20_CD4.N1	1919	789	T	True	False
+21_CD4.N2	1667	1145	T	True	False
+22_CD4.M	3251	1099	T	True	True
+23_CD8.EM	542	1741.5	T	False	False
+24_CD8.CM	1686	1513	T	True	False
+25_NK	949	1464	NK	True	True
+03_Late.Eryth	142	854.5	erythroid	False	False

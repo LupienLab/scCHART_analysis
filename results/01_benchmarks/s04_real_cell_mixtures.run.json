@@ -1,0 +1,54 @@
+{
+  "analysis": "s04_real_cell_mixtures",
+  "scchart_version": "0.1.0",
+  "python_version": "3.11.14",
+  "parameters": {
+    "n_total": 300,
+    "n_replicates": 10,
+    "minimum_population_size": 750,
+    "base_seed": 20260929,
+    "target_depth": 1099.0,
+    "selected_populations": [
+      "12_CD14.Mono.2",
+      "22_CD4.M",
+      "17_B",
+      "25_NK",
+      "09_pDC"
+    ],
+    "n_jobs": 12
+  },
+  "checks": {
+    "310 mixtures scored": true,
+    "Null margins preserved and chains complete": true,
+    "Excess equals observed minus null": true,
+    "All scores finite": true,
+    "epiCHAOS direct comparison": true
+  },
+  "outputs": [
+    {
+      "file": "mixture_population_selection.tsv",
+      "rows": 14,
+      "sha256": "26a38e5350fbdbf50b62f909d94c654a423513da146c87348c11895e7444bd9e"
+    },
+    {
+      "file": "mixture_replicates.tsv",
+      "rows": 310,
+      "sha256": "a2fa87ec6226d3b6ebb1e08b5a0102ced3b5062013d70003b63f717ea66a480b"
+    },
+    {
+      "file": "mixture_summary_by_k.tsv",
+      "rows": 60,
+      "sha256": "d5c28b4656562e74a0df1085226c4badfe738736abc7e2c21a8a0bce40301317"
+    },
+    {
+      "file": "mixture_summary_by_composition.tsv",
+      "rows": 31,
+      "sha256": "22bc174b4625b74f8e60c66134569c81856bd644434e7ca49dcb5c5b74638560"
+    },
+    {
+      "file": "mixture_cells.tsv.gz",
+      "rows": 93000,
+      "sha256": "f5a9cf0be13df5d6bff4db34140ff098cbbb342423e5c24a272fb45d72ce2006"
+    }
+  ]
+}

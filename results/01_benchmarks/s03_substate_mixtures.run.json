@@ -1,0 +1,51 @@
+{
+  "analysis": "s03_substate_mixtures",
+  "scchart_version": "0.1.0",
+  "python_version": "3.11.14",
+  "parameters": {
+    "n_cells": 600,
+    "n_replicates": 20,
+    "minority_fractions": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.25,
+      0.3,
+      0.5
+    ],
+    "separations": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "base_seed": 20260929,
+    "n_jobs": 8
+  },
+  "checks": {
+    "Expected population count": true,
+    "Programme null margins preserved": true,
+    "Structural null margins preserved and chains complete": true,
+    "Programme excess equals observed minus null": true,
+    "All scores finite": true
+  },
+  "outputs": [
+    {
+      "file": "substate_replicates.tsv",
+      "rows": 700,
+      "sha256": "034d12b615b5101990a8ccdad225b9cee3d0203b673c1faf0d4aaa0180448eb6"
+    },
+    {
+      "file": "substate_summary.tsv",
+      "rows": 35,
+      "sha256": "32037f55e5102f435323fcc397e14372f900ec66c0376cf765f6d6c224f0c6c5"
+    },
+    {
+      "file": "substate_main_effects.tsv",
+      "rows": 60,
+      "sha256": "e265ba4c2713cc87e54265755aeeebb3b9f44c88f599f007d3d122a7e41f882e"
+    }
+  ]
+}

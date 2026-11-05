@@ -1,0 +1,5 @@
+group	n_cells	n_PBS	n_TNF	n_LPS	median_count_depth
+HH x HSC-I	132	29	44	59	5956.5
+HH x HSC-II	249	69	82	98	8539
+LL x HSC-I	310	75	82	153	7187.5
+LL x HSC-II	71	23	44	4	8724

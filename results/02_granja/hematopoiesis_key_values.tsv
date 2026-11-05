@@ -1,0 +1,31 @@
+panel	quantity	value
+3	populations / cells	26 / 35038
+3b	D* (structural, programme)	789, 789
+3c	Spearman Delta_G(D*) vs Delta_P(D*)	0.40170940170940167
+S4b,c	structural: Spearman Delta_G_Dstar vs native J_obs	0.9254700854700854
+S4b,c	structural: Spearman Delta_G_Dstar vs native Delta_G	0.9883760683760683
+S4b,c	programme: Spearman Delta_P_Dstar vs native J_P_obs	0.9432478632478631
+S4b,c	programme: Spearman Delta_P_Dstar vs native Delta_P	0.9835897435897435
+3d/S4g	primary (9 vs 14), Delta_G_Dstar: Cliff's delta / exact P	0.159 / 0.557
+3d/S4g	primary (9 vs 14), Delta_P_Dstar: Cliff's delta / exact P	0.825 / 0.00047
+3d/S4g	strict HSPC (5 vs 14), Delta_G_Dstar: Cliff's delta / exact P	0.171 / 0.622
+3d/S4g	strict HSPC (5 vs 14), Delta_P_Dstar: Cliff's delta / exact P	0.800 / 0.00722
+3d/S4g	Late.Eryth excluded (9 vs 13), Delta_G_Dstar: Cliff's delta / exact P	0.145 / 0.601
+3d/S4g	Late.Eryth excluded (9 vs 13), Delta_P_Dstar: Cliff's delta / exact P	0.812 / 0.000772
+S2d-g	Spearman native depth vs J_obs (26 populations)	-0.104 (P 0.61)
+S2d-g	Spearman native depth vs Delta_G (26 populations)	0.205 (P 0.32)
+S2d-g	Spearman native depth vs Delta_G_Dstar (26 populations)	0.133 (P 0.52)
+S2d-g	Spearman native depth vs J_P_obs (26 populations)	0.778 (P 2.8e-06)
+S2d-g	Spearman native depth vs Delta_P (26 populations)	0.799 (P 9.9e-07)
+S2d-g	Spearman native depth vs Delta_P_Dstar (26 populations)	0.747 (P 1.2e-05)
+S4h	structural A_count_matched: P(HSPC | depth rank) / P(depth)	0.342 / 0.421
+S4h	structural B_fragment_matched: P(HSPC | depth rank) / P(depth)	0.268 / 0.246
+S4h	structural C_open_matched: P(HSPC | depth rank) / P(depth)	0.278 / 0.263
+S4h	programme A_count_matched: P(HSPC | depth rank) / P(depth)	0.0151 / 0.00887
+S4h	programme B_fragment_matched: P(HSPC | depth rank) / P(depth)	0.00619 / 0.116
+S4h	programme C_open_matched: P(HSPC | depth rank) / P(depth)	0.00899 / 0.0262
+S2i	min Kendall tau (Delta, means) vs 1200 counts down to 250	{'P': 0.929, 'S': 0.929}
+S2i	Kendall tau uncalibrated J_P at 250 counts	0.4999999999999999
+3e	structural_Delta_matched: primary rho / exact P	0.829 / 0.058
+3e	programme_Delta_matched: primary rho / exact P	0.657 / 0.175
+S4a	excluded LSI components	[1, 2]

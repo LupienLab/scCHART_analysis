@@ -1,0 +1,93 @@
+{
+  "analysis": "s01_hsc_cell_contributions",
+  "module": "04_xenograft_HSC",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 04_xenograft_HSC/scripts/s01_hsc_cell_contributions.py",
+  "started": "2026-11-02 03:59:33",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "broad_population": "author clusters HSC + HSC-II -> HSC",
+    "lsi": "50 components, random_state 1, aligned to X_lsi",
+    "depth_rule": "|r(component, count depth)| > 0.30 excluded",
+    "n_folds": 5,
+    "random_state": 0,
+    "null": "none"
+  },
+  "inputs": [
+    {
+      "path": "/Users/arvind/Documents/postdoc/Hetrogenity/data/andy_hematopoiesis/andy_hematopoiesis.h5ad",
+      "bytes": 382361885,
+      "sha256": "84724fd3e282fa41630d05bb9726d4129bcff176a8ddd7d60065e21988762a8e",
+      "note": "Zeng et al. HSPC xenograft multiome (ATAC peak counts)"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "04_xenograft_HSC/results/hsc_atlas_lsi_component_depth.tsv",
+      "bytes": 1206,
+      "sha256": "a2765fee8018771e25783b7adad477819e5371f7470c56cf29d711e5c9c5b22c"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_atlas_cell_contributions.tsv.gz",
+      "bytes": 1475565,
+      "sha256": "d6315e411969e1f3e99e42e98b5c67314f7b90fec5d865c3e746306a7649c6a3"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_atlas_structural_population_summary.tsv",
+      "bytes": 1318,
+      "sha256": "29143b167544d02c2777f71ab73cb96851bc2e22c6b6fa92f1cf9a42996c83b2"
+    },
+    {
+      "path": "04_xenograft_HSC/results/hsc_atlas_programme_population_summary.tsv",
+      "bytes": 1740,
+      "sha256": "a25faa64a0e8e74343d6a18651643c2d0f5d90b6b0c19e977538cf4f2266e58f"
+    }
+  ],
+  "checks": [
+    {
+      "check": "author HSC clusters are HSC and HSC-II",
+      "status": "PASS",
+      "detail": "['HSC', 'HSC-II']"
+    },
+    {
+      "check": "J_obs = mean structural d per population",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "broad HSC has cells scored on both axes",
+      "status": "PASS",
+      "detail": "5967"
+    }
+  ],
+  "scchart": {
+    "scchart_file": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/environment/scchart-be6d042/src/scchart/__init__.py",
+    "scchart_commit": "be6d042a97fea81ea1c9ec8a3b6f1e9b3703ffe4",
+    "scchart_src_tree": "b0511acd80bd2ba8fe7f8cc8a9015f054a98ccdc"
+  },
+  "notes": {
+    "LSI components excluded": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "cells with a zero representation (no structural score)": 0,
+    "broad HSC cells / scored on both axes": [
+      5976,
+      5967
+    ],
+    "Spearman scchart_structural_d vs scchart_programme_d within HSC": 0.47884166172438053
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "anndata": "0.10.9",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.2"
+  },
+  "runtime_s": 666.8,
+  "finished": "2026-11-02 04:10:40",
+  "status": "COMPLETE"
+}

@@ -1,0 +1,108 @@
+{
+  "analysis": "s01_catlas_granja_programmes",
+  "module": "03_CATLAS_programmes",
+  "command": "/Users/arvind/.local/share/mamba/envs/hetrogenity/bin/python 03_CATLAS_programmes/scripts/s01_catlas_granja_programmes.py",
+  "started": "2026-11-02 16:06:55",
+  "python": "3.11.14",
+  "platform": "macOS-26.5.1-arm64-i386-64bit",
+  "parameters": {
+    "variants": {
+      "Bheme": "programme_heme",
+      "B": "programme_all"
+    },
+    "n_folds": 5,
+    "random_state": 0,
+    "programme_seed": 10000000,
+    "matched_depth": "depth_standardized_programme_comparison, 5 replicates, package-default seeds",
+    "null": "package defaults (proposal_clock, 20 replicates)"
+  },
+  "inputs": [
+    {
+      "path": "/Users/arvind/Documents/postdoc/Hetrogenity/data/healthy_hematopoiesis_slim.h5ad",
+      "bytes": 139655018,
+      "sha256": "f3cebe1f2a0975cfd3629135165dc06a6bd63007b1988544fc19f932d9a2e6d9",
+      "note": "Granja healthy haematopoiesis atlas"
+    },
+    {
+      "path": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_information_divergence/analysis/external_programmes_catlas/reference/peak_to_catlas_programme.tsv.gz",
+      "bytes": 1554292,
+      "sha256": "d3fe8d0f335f30d8a2e7f8dc9ce4def7da52e4812a2d532d31272a77a019b91e",
+      "note": "per-peak CATLAS module labels (Granja peaks)"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "03_CATLAS_programmes/results/granja_catlas_Bheme_population_summary.tsv",
+      "bytes": 2708,
+      "sha256": "a337b6e273a27b4475ec6adf5638ff41067492185eb3e5b308c878945bb5bb7b"
+    },
+    {
+      "path": "03_CATLAS_programmes/results/granja_catlas_Bheme_matched_depth_replicates.tsv",
+      "bytes": 18944,
+      "sha256": "c3e0dc9bf548cf06a5e02e0dae3eadf9788a751e4155cdf3258fc7c340f979a9"
+    },
+    {
+      "path": "03_CATLAS_programmes/results/granja_catlas_B_population_summary.tsv",
+      "bytes": 2660,
+      "sha256": "2bd6660cafde695a8e13e7a4df06ee9ac9aa7d26cf5b9043634226da512244ef"
+    },
+    {
+      "path": "03_CATLAS_programmes/results/granja_catlas_B_matched_depth_replicates.tsv",
+      "bytes": 18293,
+      "sha256": "5fc37599198395c1b2c3261679f960986d30c5165b6abc46aa6ce870e6d4836b"
+    }
+  ],
+  "checks": [
+    {
+      "check": "peak order of the CATLAS table equals the atlas",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "B' reference has 19 modules",
+      "status": "PASS",
+      "detail": "19"
+    },
+    {
+      "check": "Bheme: nulls preserved margins",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Bheme: Delta finite for all 26 populations",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "B: nulls preserved margins",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "B: Delta finite for all 26 populations",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "scchart": {
+    "scchart_file": "/Users/arvind/Documents/postdoc/hetrogenity_new/scehr_recomb2027_manuscript/manuscript_v2/scchart_recomb2027_reproducibility/environment/scchart-be6d042/src/scchart/__init__.py",
+    "scchart_commit": "be6d042a97fea81ea1c9ec8a3b6f1e9b3703ffe4",
+    "scchart_src_tree": "b0511acd80bd2ba8fe7f8cc8a9015f054a98ccdc"
+  },
+  "notes": {
+    "D_star": 789.0,
+    "Bheme: K": 19,
+    "B: K": 121
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.3.3",
+    "anndata": "0.10.9",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.2"
+  },
+  "runtime_s": 23152.4,
+  "finished": "2026-11-02 22:32:48",
+  "status": "COMPLETE"
+}

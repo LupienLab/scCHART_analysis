@@ -1,0 +1,3 @@
+population	n_cells	zero_open_removed	median_depth	median_n_open	J_S	E0_S	Delta_S	sd0_S	J_S_all50	margins_exact_S	chains_complete_S	J_P	E0_P	Delta_P	sd0_P	scored_fraction	median_P_i	margins_exact_P	chains_complete_P
+GMP a (native depth)	1000	0	5894.5	3015.5	0.8381051959	0.08760236776	0.7505028282	0.0009977842399	0.2364985518	True	True	0.9587681189	0.3601850846	0.5985830343	0.006428264477	1	0.4310863785	True	True
+GMP b (shallow copy, q = 0.35)	1000	0	2205.5	1742	0.8788385949	0.1476475024	0.7311910926	0.002169614262	0.2558643135	True	True	1.057380441	0.5203437944	0.5370366469	0.006946840068	1	0.4294753428	True	True
